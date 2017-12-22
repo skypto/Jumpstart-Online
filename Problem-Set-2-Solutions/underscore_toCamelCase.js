@@ -53,3 +53,22 @@ function underToCamel(underName) {
     
 //     return camelCaseOutput;
 // }
+
+
+
+ /* Solution 4 */ 
+
+`
+function underToCamel(str){
+  var camel='';
+  for(var i =0;i<=str.length-1;i++){
+    if(str[i]!=="_"){
+      camel+=str[i]
+    }else if(str[i]==="_"){
+      camel+=str[i+1].toUpperCase();
+      i++;
+    }
+  }return camel;
+}
+
+`
